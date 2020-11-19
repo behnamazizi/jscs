@@ -26,18 +26,18 @@ probabilityOfCombinations(10, 3);
 
 ```
 ---
-## Change English Numbers to Farsi (0123456789 --> ۰۱۲۳۴۵۶۷۸۹)
+## Convert English Digits to Farsi (0123456789 --> ۰۱۲۳۴۵۶۷۸۹)
 ```javascript
-function farsiNumbers(number){
+function farsiDigits(number){
   return number.toString().split('').map(ch => {
     return ch.match(/[0-9]/) ? ["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"][parseInt(ch)] : ch
   }).join('')
 }
 
-farsiNumbers("7 Apples Plus 5 Apple is equal to 12 Apples!");
+farsiDigits("7 Apples Plus 5 Apple is equal to 12 Apples!");
 //  expected output: "۷ Apples Plus ۵ Apple is equal to ۱۲ Apples!"
 
-farsiNumbers(1.618);
+farsiDigits(1.618);
 //  expected output: "۱.۶۱۸"
 
 ```
