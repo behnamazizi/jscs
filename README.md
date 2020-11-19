@@ -1,5 +1,5 @@
 # JavaScript Code Snippets
-
+---
 ### Calculate Factorial of Number
 ```javascript
 function factorialize(num) {
