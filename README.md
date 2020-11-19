@@ -25,6 +25,7 @@ probabilityOfCombinations(10, 3);
 // expected output: 120
 
 ```
+---
 ## Change English Numbers to Farsi (0123456789 --> ۰۱۲۳۴۵۶۷۸۹)
 ```javascript
 function farsiNumbers(number){
