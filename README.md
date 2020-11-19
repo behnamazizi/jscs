@@ -12,7 +12,7 @@ factorialize(7);
 ```
 
 ### Calculate Probability of Combinations
-__ To calculate the factorial of number: [factorialize(num)](#Calculate-Factorial-of-Number)__
+_To calculate the factorial of number: [factorialize(num)](#Calculate-Factorial-of-Number)_
 ```javascript
 // Number of sample points in set (n)	
 // Number of sample points in each combination (r)
