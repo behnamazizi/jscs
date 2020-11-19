@@ -28,9 +28,8 @@ probabilityOfCombinations(10, 3);
 ## Change English Numbers to Farsi (0123456789 --> ۰۱۲۳۴۵۶۷۸۹)
 ```javascript
 function farsiNumbers(number){
-  let fn =["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"];
   return number.toString().split('').map(ch => {
-    return ch.match(/[0-9]/g) ? fn[parseInt(ch)] : ch
+    return ch.match(/[0-9]/g) ? ["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"][parseInt(ch)] : ch
   }).join('')
 }
 
