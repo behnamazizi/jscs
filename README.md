@@ -1,6 +1,6 @@
 # JavaScript Code Snippets
----
-### Calculate Factorial of Number
+
+## Calculate Factorial of Number
 ```javascript
 function factorialize(num) {
   return num < 0 ? -1 : num == 0 ? 1 : num * factorialize(num - 1);
@@ -10,7 +10,7 @@ factorialize(7);
 //  expected output: 7
 ```
 ---
-### Calculate Probability of Combinations
+## Calculate Probability of Combinations
 _To calculate the factorial of number: [factorialize(num)](#Calculate-Factorial-of-Number)_
 ```javascript
 // Number of sample points in set (n)	
