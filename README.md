@@ -29,7 +29,7 @@ probabilityOfCombinations(10, 3);
 ```javascript
 function farsiNumbers(number){
   return number.toString().split('').map(ch => {
-    return ch.match(/[0-9]/g) ? ["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"][parseInt(ch)] : ch
+    return ch.match(/[0-9]/) ? ["۰","۱","۲","۳","۴","۵","۶","۷","۸","۹"][parseInt(ch)] : ch
   }).join('')
 }
 
