@@ -42,3 +42,29 @@ farsiDigits(1.618);
 
 ```
 ---
+## Generate a Ranged Random Number
+```javascript
+function getRandomInt(min, max, decimal) {
+  min = decimal ? Math.ceil(min) : min;
+  max = decimal ? Math.floor(max) : max;
+  let rnd = Math.random() * (max - min) + min;
+  return decimal ? rnd  : Math.floor(rnd);
+}
+
+getRandomInt(1, 3, true);
+//  expected output: 1.0 to 3.0
+
+getRandomInt(1, 3, false);
+//  expected output: 1 or 2 or 3
+```
+---
+
+
+
+
+
+
+
+
+
+
