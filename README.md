@@ -14,7 +14,8 @@ factorialize(7);
 ### Calculate Probability of Combinations
 ```javascript
 // Number of sample points in set (n)	
-// Number of sample points in each combination (r)	
+// Number of sample points in each combination (r)
+// To calculate the factorial of number: [factorialize(num)](#Calculate-Factorial-of-Number)
 
 function probabilityOfCombinations(n, r) {
   return factorialize(n) / (factorialize(r) * factorialize(n - r));
