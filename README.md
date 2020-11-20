@@ -42,6 +42,20 @@ farsiDigits(1.618);
 
 ```
 ---
+## Convert Arabic Characters to Farsi (ي ك ة ٤ ٥ ٦ --> ی ک ه ۴ ۵ ۶)
+```
+function persianizer(text){
+  return text.toString().split('').map(ch => {
+    let ar = ["ي","ك","ة","٤","٥","٦"].indexOf(ch);
+    let fa = ["ی","ک","ه","۴","۵","۶"];
+    return ar > -1 ? fa[ar] : ch
+  }).join('')
+}
+
+persianizer("كة ٥ تا بستة نمونة كوچك از فرداي كودك و ٦٤٥ تك تك مي‌شود.")
+//  expected output:  'که ۵ تا بسته نمونه کوچک از فردای کودک و ۶۴۵ تک تک می‌شود.'
+```
+---
 ## Generate a Ranged Random Number
 ```javascript
 function getRandomInt(min, max, decimal) {
@@ -58,7 +72,6 @@ getRandomInt(1, 3, false);
 //  expected output: 1 or 2 or 3
 ```
 ---
-
 
 
 
