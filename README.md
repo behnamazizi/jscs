@@ -1,6 +1,16 @@
 # JavaScript Code Snippets
 
-## Calculate Factorial of Number
+## index
+num | title 
+1 | [Calculate Factorial of Number](#calculate-factorial-of-number)
+2 | [Calculate Probability of Combinations](#calculate-probability-of-combinations)
+3 | [Convert English Digits to Farsi](#convert-english-digits-to-farsi)
+4 | [Convert Arabic Characters to Farsi](#convert-arabic-characters-to-farsi)
+5 | [Generate a Ranged Random Number](#generate-a-ranged-random-number)
+6 | [Parse CSV to Object](#parse-csv-to-object)
+
+
+### Calculate Factorial of Number
 ```javascript
 function factorialize(num) {
   return num < 0 ? -1 : num == 0 ? 1 : num * factorialize(num - 1);
@@ -10,7 +20,7 @@ factorialize(7);
 //  expected output: 7
 ```
 ---
-## Calculate Probability of Combinations
+### Calculate Probability of Combinations
 _To calculate the factorial of a number: [factorialize(num)](#Calculate-Factorial-of-Number)_
 ```javascript
 // Number of sample points in set (n)	
@@ -26,7 +36,8 @@ probabilityOfCombinations(10, 3);
 
 ```
 ---
-## Convert English Digits to Farsi (0123456789 --> ۰۱۲۳۴۵۶۷۸۹)
+### Convert English Digits to Farsi
+_(0123456789 --> ۰۱۲۳۴۵۶۷۸۹)_
 ```javascript
 function farsiDigits(number){
   return number.toString().split('').map(ch => {
@@ -42,7 +53,8 @@ farsiDigits(1.618);
 
 ```
 ---
-## Convert Arabic Characters to Farsi (ي ك ة ٤ ٥ ٦ --> ی ک ه ۴ ۵ ۶)
+### Convert Arabic Characters to Farsi
+_(ي ك ة ٤ ٥ ٦ --> ی ک ه ۴ ۵ ۶)_
 ```
 function persianizer(text){
   return text.toString().split('').map(ch => {
@@ -56,7 +68,7 @@ persianizer("كة ٥ تا بستة نمونة كوچك از فرداي كودك 
 //  expected output:  'که ۵ تا بسته نمونه کوچک از فردای کودک و ۶۴۵ تک تک می‌شود.'
 ```
 ---
-## Generate a Ranged Random Number
+### Generate a Ranged Random Number
 ```javascript
 function getRandomInt(min, max, decimal) {
   min = decimal ? Math.ceil(min) : min;
@@ -72,7 +84,7 @@ getRandomInt(1, 3, false);
 //  expected output: 1 or 2 or 3
 ```
 ---
-## Parse CSV to Object
+### Parse CSV to Object
 ```javascript
 const SapmpleCSV = `id,first name,last name,address,city,age
 569874,John,Doe,120 jefferson st.,Riverside,32
