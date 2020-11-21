@@ -84,7 +84,7 @@ const SapmpleCSV = `id,first name,last name,address,city,age
 function csvToObject(csv, header) {
   let arr = [];
   let hdr = header ? csv.split('\n')[0].split(',') : null;
-  csv.split('\n').map((row, index) => {
+  csv.split('\n').forEach((row, index) => {
     row = row.split(',');
     if (header && index > 0) {
       ro = {};
