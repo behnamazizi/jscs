@@ -72,8 +72,68 @@ getRandomInt(1, 3, false);
 //  expected output: 1 or 2 or 3
 ```
 ---
+## Parse CSV to Object
+```javascript
+const SapmpleCSV = `id,first name,last name,address,city,age
+569874,John,Doe,120 jefferson st.,Riverside,32
+254789,Jack,McGinnis,220 hobo Av.,Phila,22
+214778,John,Repici,120 Jefferson St.,Riverside,24
+458718,Stephen,Tyler,7452 Terrace road,SomeTown,28
+366987,Joan,Jet,9th, at Terrace plc,Desert City,33`;
 
+function csvToObject(csv, header) {
+  let arr = [];
+  let hdr = header ? csv.split('\n')[0].split(',') : null;
+  csv.split('\n').map((row, index) => {
+    row = row.split(',');
+    if (header && index > 0) {
+      ro = {};
+      hdr.forEach((title, no) => {
+        ro[title] = row[no];
+      });
+      arr.push(ro)
+    }else if(!header){
+      arr.push(row)
+    }
+  });
+  return arr;
+}
 
+csvToObject(SapmpleCSV, true);
+/*
+expected output:
+[
+  {
+    id: '569874',
+    'first name': 'John',
+    'last name': 'Doe',
+    address: '120 jefferson st.',
+    city: 'Riverside',
+    age: '32'
+  },
+  {
+    id: '254789',
+    'first name': 'Jack',
+    'last name': 'McGinnis',
+    address: '220 hobo Av.',
+    city: 'Phila',
+    age: '22'
+  },
+  ...
+  ]
+*/
+csvToObject(SapmpleCSV, false);
+/*
+expected output:
+[
+  [ 'id', 'first name', 'last name', 'address', 'city', 'age' ],
+  [ '569874', 'John', 'Doe', '120 jefferson st.', 'Riverside', '32' ],
+  [ '254789', 'Jack', 'McGinnis', '220 hobo Av.', 'Phila', '22' ],
+  ...
+  ]
+*/
+```
+---
 
 
 
