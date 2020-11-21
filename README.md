@@ -2,6 +2,7 @@
 
 ## index
 | Num | Title |
+|---| --- |
 | 1 | [Calculate Factorial of Number](#calculate-factorial-of-number) |
 | 2 | [Calculate Probability of Combinations](#calculate-probability-of-combinations) |
 | 3 | [Convert English Digits to Farsi](#convert-english-digits-to-farsi) |
