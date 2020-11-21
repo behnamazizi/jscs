@@ -89,7 +89,7 @@ function csvToObject(csv, header) {
     if (header && index > 0) {
       ro = {};
       hdr.forEach((title, no) => {
-        ro[title] = row[no];
+        ro[title.replace(/\s/g, '')] = row[no];
       });
       arr.push(ro)
     }else if(!header){
@@ -105,16 +105,16 @@ expected output:
 [
   {
     id: '569874',
-    'first name': 'John',
-    'last name': 'Doe',
+    firstname: 'John',
+    lastname: 'Doe',
     address: '120 jefferson st.',
     city: 'Riverside',
     age: '32'
   },
   {
     id: '254789',
-    'first name': 'Jack',
-    'last name': 'McGinnis',
+    firstname: 'Jack',
+    lastname: 'McGinnis',
     address: '220 hobo Av.',
     city: 'Phila',
     age: '22'
