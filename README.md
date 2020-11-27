@@ -56,7 +56,7 @@ farsiDigits(1.618);
 ---
 ### Convert Arabic Characters to Farsi
 _(ي ك ة ٤ ٥ ٦ --> ی ک ه ۴ ۵ ۶)_
-```
+```javascript
 function persianizer(text){
   return text.toString().split('').map(ch => {
     let ar = ["ي","ك","ة","٤","٥","٦"].indexOf(ch);
