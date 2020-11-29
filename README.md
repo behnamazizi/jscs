@@ -9,6 +9,7 @@
 | 4 | [Convert Arabic Characters to Farsi](#convert-arabic-characters-to-farsi) |
 | 5 | [Generate a Ranged Random Number](#generate-a-ranged-random-number) |
 | 6 | [Parse CSV to Object](#parse-csv-to-object) |
+| 7 | [Address Object Property by String](#address-object-property-by-string) |
 
 
 ### Calculate Factorial of Number
@@ -146,6 +147,23 @@ expected output:
   ]
 */
 ```
+---
+
+### Address Object Property by String
+
+```javascript
+myObject = { A : { B: { C: [{ value: 'Brenda' }, { value: 'Jim' }, { value: 'Lucy' }] } }};
+
+function getValue(o, path) {
+    return path.replace(/\[/g, '.').replace(/\]/g, '').split('.').reduce((acc, cur) => {
+        return (acc || {})[cur];
+    }, o);
+}
+
+getValue(myObject , 'A.B.C 1 d[2]')
+//expected output: {value: "Lucy"}
+```
+
 ---
 
 
