@@ -19,7 +19,7 @@ function factorialize(num) {
 }
 
 factorialize(7);
-//  expected output: 7
+//  expected output: 5040
 ```
 ---
 ### Calculate Probability of Combinations
@@ -88,7 +88,7 @@ getRandomInt(1, 3, false);
 ---
 ### Parse CSV to Object
 ```javascript
-const SapmpleCSV = `id,first name,last name,address,city,age
+const myCSV = `id,first name,last name,address,city,age
 569874,John,Doe,120 jefferson st.,Riverside,32
 254789,Jack,McGinnis,220 hobo Av.,Phila,22
 214778,John,Repici,120 Jefferson St.,Riverside,24
@@ -113,7 +113,7 @@ function csvToObject(csv, header) {
   return arr;
 }
 
-csvToObject(SapmpleCSV, true);
+csvToObject(myCSV, true);
 /*
 expected output:
 [
@@ -136,7 +136,7 @@ expected output:
   ...
   ]
 */
-csvToObject(SapmpleCSV, false);
+csvToObject(myCSV, false);
 /*
 expected output:
 [
