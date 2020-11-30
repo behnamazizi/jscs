@@ -11,8 +11,10 @@
 | 6 | [Parse CSV to Object](#parse-csv-to-object) |
 | 7 | [Address Object Property by String](#address-object-property-by-string) |
 
+---
 
 ### Calculate Factorial of Number
+
 ```javascript
 function factorialize(num) {
   return num < 0 ? -1 : num == 0 ? 1 : num * factorialize(num - 1);
