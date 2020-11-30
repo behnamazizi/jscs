@@ -1,6 +1,6 @@
 # JavaScript Code Snippets
 
-## index
+## Table of contents
 | Num | Title |
 |:---:| --- |
 | 1 | [Calculate Factorial of Number](#calculate-factorial-of-number) |
