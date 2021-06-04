@@ -10,6 +10,7 @@
 | 5 | [Generate a Ranged Random Number](#generate-a-ranged-random-number) |
 | 6 | [Parse CSV to Object](#parse-csv-to-object) |
 | 7 | [Address Object Property by String](#address-object-property-by-string) |
+| 8 | [Get Number of Lines in a Paragraph](#get-number-of-lines-in-a-paragraph) |
 
 ---
 
@@ -168,7 +169,16 @@ getValue(myObject , 'A.B.C 1 d[2]')
 
 ---
 
+### Get Number of Lines in a Paragraph
 
+```javascript
+function countLines(el) {
+    let style = window.getComputedStyle(el, null);
+    let height = parseInt(style.getPropertyValue('height'));
+    let lineHeight = parseInt(style.getPropertyValue('line-height'));
+    return Math.ceil(height / lineHeight);
+}
+```
 
 
 
