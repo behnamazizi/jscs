@@ -209,6 +209,8 @@ spine(80, "uncoated", 120, "hardback");
 //expected output: 12
 ```
 
+---
+
 ### 2D Convas Gradient Generator
 
 ```javascript
