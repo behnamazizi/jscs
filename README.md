@@ -198,8 +198,8 @@ function spine(paperweight, papervolume, numberofpages, typeofcover) {
             "bookWoveCream": 18
         },
         cover = {
-            "hardback":6,
-            "paperback":1
+            "hardback": 6,
+            "paperback": 1
         }
     return ((paperweight * volume[papervolume] * numberofpages) / 20000) + cover[typeofcover];
 }
