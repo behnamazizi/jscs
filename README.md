@@ -212,7 +212,6 @@ spine(80, "uncoated", 120, "hardback");
 ### 2D Convas Gradient Generator
 
 ```javascript
-
 function lineGradient(ctx, sx, sy, ex, ey, colors) {
     let gradient = ctx.createLinearGradient(sx, sy, ex, ey);
     colors.forEach((color, i) => {
@@ -222,8 +221,9 @@ function lineGradient(ctx, sx, sy, ex, ey, colors) {
 }
 
 lineGradient(ctx, 0, 0, 100, 100, [[0,"red"],[1,"blue"]]);
+```
 
-
+```javascript
 function radialGradient(ctx, x0, y0, r0, x1, y1, r1, colors) {
     let gradient = ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
     colors.forEach((color, i) => {
@@ -233,7 +233,6 @@ function radialGradient(ctx, x0, y0, r0, x1, y1, r1, colors) {
 }
 
 radialGradient(ctx, 100, 100, 0, 100, 100, 50, [[0,"red"],[1,"blue"]])
-
 ```
 
 
