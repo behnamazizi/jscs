@@ -11,6 +11,7 @@
 | 6 | [Parse CSV to Object](#parse-csv-to-object) |
 | 7 | [Address Object Property by String](#address-object-property-by-string) |
 | 8 | [Get Number of Lines in a Paragraph](#get-number-of-lines-in-a-paragraph) |
+| 9 | [Calculate Book Spine Thickness](#calculate-book-spine-thickness) |
 
 ---
 
@@ -178,6 +179,33 @@ function countLines(el) {
     let lineHeight = parseInt(style.getPropertyValue('line-height'));
     return Math.ceil(height / lineHeight);
 }
+```
+
+---
+
+### Calculate Book Spine Thickness
+
+```javascript
+function spine(paperweight, papervolume, numberofpages, typeofcover) {
+    const volume = {
+            "gloss": 8,
+            "satin": 9,
+            "matt": 9,
+            "silk": 9,
+            "mattBulk": 11,
+            "uncoated": 12.5,
+            "bookWove": 12.5,
+            "bookWoveCream": 18
+        },
+        cover = {
+            "hardback":6,
+            "paperback":1
+        }
+    return ((paperweight * volume[papervolume] * numberofpages) / 20000) + cover[typeofcover];
+}
+
+spine(80, "uncoated", 120, "hardback");
+//expected output: 12
 ```
 
 
