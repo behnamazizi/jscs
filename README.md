@@ -12,6 +12,7 @@
 | 7 | [Address Object Property by String](#address-object-property-by-string) |
 | 8 | [Get Number of Lines in a Paragraph](#get-number-of-lines-in-a-paragraph) |
 | 9 | [Calculate Book Spine Thickness](#calculate-book-spine-thickness) |
+| 10 | [2D Convas Gradient Generator](#2d-convas-gradient-generator) |
 
 ---
 
@@ -206,6 +207,33 @@ function spine(paperweight, papervolume, numberofpages, typeofcover) {
 
 spine(80, "uncoated", 120, "hardback");
 //expected output: 12
+```
+
+### 2D Convas Gradient Generator
+
+```javascript
+
+function lineGradient(ctx, sx, sy, ex, ey, colors) {
+    let gradient = ctx.createLinearGradient(sx, sy, ex, ey);
+    colors.forEach((color, i) => {
+        gradient.addColorStop(color[0], color[1]);
+    })
+    return gradient
+}
+
+lineGradient(ctx, 0, 0, 100, 100, [[0,"red"],[1,"blue"]]);
+
+
+function radialGradient(ctx, x0, y0, r0, x1, y1, r1, colors) {
+    let gradient = ctx.createRadialGradient(x0, y0, r0, x1, y1, r1);
+    colors.forEach((color, i) => {
+        gradient.addColorStop(color[0], color[1]);
+    })
+    return gradient
+}
+
+radialGradient(ctx, 100, 100, 0, 100, 100, 50, [[0,"red"],[1,"blue"]])
+
 ```
 
 
