@@ -12,7 +12,8 @@
 | 7 | [Address Object Property by String](#address-object-property-by-string) |
 | 8 | [Get Number of Lines in a Paragraph](#get-number-of-lines-in-a-paragraph) |
 | 9 | [Calculate Book Spine Thickness](#calculate-book-spine-thickness) |
-| 10 | [2D Convas Gradient Generator](#2d-convas-gradient-generator) |
+| 10 | [2D Canvas Gradient Generator](#2d-canvas-gradient-generator) |
+| 11 | [2D Canvas ًRound Corner Rectangle](#2d-canvas-round-corner-rectangle) |
 
 ---
 
@@ -211,7 +212,7 @@ spine(80, "uncoated", 120, "hardback");
 
 ---
 
-### 2D Convas Gradient Generator
+### 2D Canvas Gradient Generator
 
 ```javascript
 function lineGradient(ctx, sx, sy, ex, ey, colors) {
@@ -236,6 +237,29 @@ function radialGradient(ctx, x0, y0, r0, x1, y1, r1, colors) {
 
 radialGradient(ctx, 100, 100, 0, 100, 100, 50, [[0,"red"],[1,"blue"]])
 ```
+
+---
+
+### 2D Canvas ًRound Corner Rectangle
+
+```javascript
+function roundRectangle(x, y, w, h, r) {
+    r = typeof r == "object" ? r : [r,r,r,r];
+    let path = new Path2D();
+    path.moveTo(x, y + r[0]);
+    path.arcTo(x, y, x + r[0], y, r[0]);
+    path.arcTo(x + w, y, x + w, y + r[1], r[1]);
+    path.arcTo(x + w, y + h, x + w - r[2], y + h, r[2]);
+    path.arcTo(x, y + h, x, y + h - r[3], r[3]);
+    return path;
+}
+
+ctx.fill(roundRectangle(50, 50, 100, 100, 10));
+
+ctx.fill(roundRectangle(170, 50, 100, 100, [50, 0, 0, 50]));
+
+```
+
 
 
 
