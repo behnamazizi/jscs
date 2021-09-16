@@ -13,7 +13,7 @@
 | 8 | [Get Number of Lines in a Paragraph](#get-number-of-lines-in-a-paragraph) |
 | 9 | [Calculate Book Spine Thickness](#calculate-book-spine-thickness) |
 | 10 | [2D Canvas Gradient Generator](#2d-canvas-gradient-generator) |
-| 11 | [2D Canvas ًRound Corner Rectangle](#2d-canvas-round-corner-rectangle) |
+| 11 | [2D Canvas Round Corner Rectangle](#2d-canvas-round-corner-rectangle) |
 
 ---
 
