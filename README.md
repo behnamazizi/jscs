@@ -240,7 +240,7 @@ radialGradient(ctx, 100, 100, 0, 100, 100, 50, [[0,"red"],[1,"blue"]])
 
 ---
 
-### 2D Canvas ًRound Corner Rectangle
+### 2D Canvas Round Corner Rectangle
 
 ```javascript
 function roundRectangle(x, y, w, h, r) {
