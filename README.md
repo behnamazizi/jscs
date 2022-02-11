@@ -14,6 +14,7 @@
 | 9 | [Calculate Book Spine Thickness](#calculate-book-spine-thickness) |
 | 10 | [2D Canvas Gradient Generator](#2d-canvas-gradient-generator) |
 | 11 | [2D Canvas Round Corner Rectangle](#2d-canvas-round-corner-rectangle) |
+| 12 | [Check the possibility of swipe in a 2d matrix](#Check-the-possibility-of-swipe-in-a-2d-matrix) |
 
 ---
 
@@ -241,7 +242,6 @@ radialGradient(ctx, 100, 100, 0, 100, 100, 50, [[0,"red"],[1,"blue"]])
 ---
 
 ### 2D Canvas Round Corner Rectangle
-
 ```javascript
 function roundRectangle(x, y, w, h, r) {
     r = typeof r == "object" ? r : [r,r,r,r];
@@ -254,10 +254,32 @@ function roundRectangle(x, y, w, h, r) {
     return path;
 }
 
-ctx.fill(roundRectangle(50, 50, 100, 100, 10));
+```
+---
 
-ctx.fill(roundRectangle(170, 50, 100, 100, [50, 0, 0, 50]));
+### Check the possibility of swipe in a 2d matrix
+this function checks if two member of a 2d matrix are swipeable by checking that they are in same row or column and they are neighbors.
 
+```javascript
+function isPossible(array,a,b){
+    let rowA = Math.floor(array.flat().indexOf(a) / array[0].length),
+        colA = array[rowA].indexOf(a);
+    let rowB = Math.floor(array.flat().indexOf(b) / array[0].length),
+        colB = array[rowB].indexOf(b);
+    return rowA == rowB && Math.abs(colA - colB) == 1 ? true : colA == colB && Math.abs(rowA - rowB) == 1 ? true : false;
+}
+
+// sample matrix:
+matrix = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15],
+]
+
+isPossible(matrix,3,8)
+//expected output: true
+isPossible(matrix,3,13)
+//expected output: false
 ```
 
 
