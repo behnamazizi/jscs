@@ -15,6 +15,7 @@
 | 10 | [2D Canvas Gradient Generator](#2d-canvas-gradient-generator) |
 | 11 | [2D Canvas Round Corner Rectangle](#2d-canvas-round-corner-rectangle) |
 | 12 | [Check the possibility of swipe in a 2d matrix](#Check-the-possibility-of-swipe-in-a-2d-matrix) |
+| 13 | [Try Catch a Fetch](#Try-Catch-a-Fetch) |
 
 ---
 
@@ -281,9 +282,22 @@ isPossible(matrix,3,8)
 isPossible(matrix,3,13)
 //expected output: false
 ```
+---
 
+### Try Catch a Fetch
 
+```javascript
+fetch(url).then((response) => {
+  if (response.ok) {
+    return response.json();
+  }
+  throw new Error('Something went wrong');
+})
+.then((responseJson) => {
+  // Do something with the response
+})
+.catch((error) => {
+  console.log(error)
+});
 
-
-
-
+```
